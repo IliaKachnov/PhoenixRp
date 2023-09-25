@@ -1,0 +1,225 @@
+:root {
+  --flick-big-text-shadow:
+      0 0 2px #fff,
+      0 0 3px #4ca6a7,
+      0 0 4px #4ca6a7,
+      0 0 6px #4ca6a7,
+      0 0 7px #4ca6a7,
+      0 0 20px #4ca6a7,
+      0 0 30px #4ca6a7,
+      0 0 40px #4ca6a7;
+}
+
+
+.popup__phone {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 26, 50, 0.60);
+  backdrop-filter: blur(25px);
+  top: 0%;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease .2s 0s;
+}
+.popup__phone.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__phone.open .popup__phone__content {
+  opacity: 1;
+}
+
+.popup__phone__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup__phone__content {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.53);
+  position: relative;
+  /* top: -200px; */
+  box-shadow: 0 0 10px #4ca6a7;
+}
+.popup__code__content {
+  height: 334px;
+}
+.popup__phone__content {
+  height: 700px;
+}
+.popup__image-wrapper {
+  max-width: 450px;
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.popup__name__close-img {
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.popup__name__close-img:hover path,
+.popup__name__close-img:hover rect {
+  fill: #4ca6a7;
+}
+.signup__title {
+  text-align: center;
+  color: #FFF;
+  font-size: 47px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* text-shadow: var(--flick-big-text-shadow); */
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: var(--flick-big-text-shadow);
+  }
+  20%, 24%, 55% {       
+    text-shadow: var(--flick-small-text-shadow);;
+  }
+}
+
+.popup__phone {
+}
+.popup__phone__body {
+}
+.popup__phone__content {
+}
+.popup__image-wrapper {
+}
+.popup__name__close-img {
+}
+.popup__name__text-wrapper {
+}
+.sighup__title {
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 415px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.choose__server {
+  width: 415px;
+  height: 40px;
+  background-color: #FFF;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+label {
+  color: #FFF;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+input {
+  width: 415px;
+  height: 40px;
+  outline: #4ca6a7;
+  padding-left: 10px;
+  font-size: 20px;
+}
+.label__login {
+  margin-top: 10px;
+}
+.input__login {
+  margin-bottom: 5px;
+}
+.label__email {
+  margin-top: 10px;
+}
+.input__email {
+  margin-bottom: 5px;
+}
+.label__password {
+  margin-top: 10px;
+}
+.input__password {
+  margin-bottom: 5px;
+}
+.label__repeat-password {
+  margin-top: 10px;
+}
+.input__repeat-password {
+  margin-bottom: 5px;
+}
+.checkbox__wrapper {
+  display: flex;
+}
+.input__checkbox {
+}
+.label__checkbox {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.input__submit {
+  margin-top: 40px;
+  height: 60px;
+  background-color: #000;
+  color: #FFF;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.input__submit:hover {
+  background-color: #FFF;
+  color: #000;
+}
+.choose__server-wrapper {
+  position: relative;
+}
+.server__dropdown {
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  opacity: 0;
+  z-index: -50;
+  transition: .1s ease all;
+}
+.server__dropdown.active {
+  opacity: 1;
+  z-index: 3;
+}
+.server-dropdown__item {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  cursor: pointer;
+}
+.server-dropdown__item p {
+  color: #FFF;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,117 @@
+:root {
+  --flick-big-text-shadow:
+      0 0 2px #fff,
+      0 0 3px #4ca6a7,
+      0 0 4px #4ca6a7,
+      0 0 6px #4ca6a7,
+      0 0 7px #4ca6a7,
+      0 0 40px #4ca6a7,
+      0 0 70px #4ca6a7,
+      0 0 100px #4ca6a7;
+}
+/* NAV */
+.nav {
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  width: 100%;
+  height: 73px;
+}
+.nav__title {
+  /* margin-left: 124px; */
+  color: #FFF;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 73px;
+  max-width: 1920px;
+  width: 100%;
+
+}
+.nav__links-wrapper {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  max-width: 1050px;
+  width: 100%;
+  gap: 40px;
+}
+.nav__links-wrapper li {
+  color: #FFF;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  transition: all .4s ease 0s;
+}
+.nav__links-wrapper li:hover {
+  transform: translateY(20px);
+  background-color: #FFF;
+  color: #000;
+}
+.nav__links-wrapper li img {
+  display: none;
+  transition: all .2s ease;
+} 
+.nav__links-wrapper li:hover img {
+  display: block;
+  position: absolute;
+  top: -10px;
+}
+.nav__how {
+  width: 175px;
+  font-size: 24px;
+  text-align: center;
+}
+label {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.nav__languages {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 21px;  
+}
+.nav__logo {
+  width: 49px;
+  height: 73px;
+}
+
+.nav__title {
+  color: #fff;    
+  /* text-shadow: var(--flick-big-text-shadow); */
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: var(--flick-big-text-shadow);
+  }
+  20%, 24%, 55% {       
+    text-shadow: var(--flick-small-text-shadow);;
+  }
+}
+/* NAV END */
