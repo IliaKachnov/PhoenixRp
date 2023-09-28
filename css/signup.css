@@ -223,3 +223,45 @@ input {
   font-weight: 400;
   line-height: normal;
 }
+
+@media (max-width: 560px) {
+  .popup__phone {
+    z-index: 20;
+  }
+  .popup__phone__content {
+    height: 95vh;
+    width: 100%;
+    z-index: 20;
+  }
+}
+
+@media (max-width: 500px) {
+  .popup__image-wrapper {
+    margin-right: 20px;
+  }
+  .signup__title {
+    font-size: 35px;
+  }
+  .form__wrapper {
+    padding: 0 20px;
+  }
+  .choose__server,
+  input {
+    max-width: 415px;
+    width: 100%;
+  }
+  .choose__server {
+    font-size: 25px;
+  }
+  label {
+    font-size: 20px;
+  }
+  .choose__server,
+  input {
+    height: 35px;
+  }
+  .input__submit {
+    font-size: 20px;
+    height: 40px;
+  }
+}
