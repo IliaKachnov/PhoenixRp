@@ -17,7 +17,7 @@
     <nav class="nav">
       <div class="nav__wrapper">
         <div class="nav__title-wrapper">
-          <img class="nav__logo" src="img/logo.png" alt="">
+          <img class="nav__logo" src="img/logo.png">
           <a href="index.html" class="nav__title">Phoenix RP</a>
         </div>
         <div class="nav__links">
@@ -30,9 +30,28 @@
             <li class="nav__forum"><img src="img/icons/ellipse.svg">  <a href="#">Форум</a></li>
           </ul>
         </div>
+       <div class="nav__items">
         <div class="language__wrapper">
-          <p>Выбрать язык</p>
+          <div class="language__wrapper-inner">
+            <img id="ru-flag" src="img/icons/ru-flag.png">
+            <img id="en-flag" src="img/icons/en-flag.png">
+            <p class="language__choose">Выбрать язык</p>
+          </div>
+          <div class="language__items">
+            <div id="ru" class="language__item">
+              <img class="language__item-img" src="img/icons/ru-flag.png">
+              <p class="language">Русский</p>
+            </div>
+            <div id="en" class="language__item">
+              <img class="language__item-img" src="img/icons/en-flag.png">
+              <p class="language">English</p>
+            </div>
+          </div>
         </div>
+        <div class="burger__wrapper">
+          <span class="burger__line"></span>
+        </div>
+       </div>
       </div>
     </nav>
     <aside class="aside">
@@ -43,7 +62,6 @@
       </div>
     </aside>
     <section id="home" class="section home">
-      <!-- <img class="home__img" src="img/fourth.png"> -->
       <div class="home__wrapper">
         <div class="home__servers">
           <div class="status__wrapper">
@@ -90,8 +108,15 @@
           </div>
         </div>
         <div class="home__register">
-          <p id="personalData__name" class="register__btn">Зарегистрироваться</p>
-          <p class="register__download"><a target="_blank" href="https://rage.mp">Скачать Rage MP</a></p>
+          <div class="personalData__wrapper">
+            <p id="personalData__name" class="register__btn">Зарегистрироваться</p>
+            <p class="register__download"><a target="_blank" href="https://rage.mp">Скачать Rage MP</a></p>
+          </div>
+          <div class="mobile__items">
+            <a href="#" class="mobile__item">Пользовательское соглашение</a>
+            <a href="#" class="mobile__item">Правила оплаты</a>
+            <a href="#" class="mobile__item">Условия пользования</a>
+          </div>
         </div>
       </div>
     </section>
@@ -183,13 +208,39 @@
           <a href="#">
             <div class="trailer__link">
               <p class="trailer__link-title">Вконтакте</p>
-              <img class="link__img vk" src="img/vk.png">
+              <!-- <img class="link__img vk" src="img/vk.png"> -->
+              <svg class="link__img vk" xmlns="http://www.w3.org/2000/svg" width="218" height="125" viewBox="0 0 218 125" fill="none">
+                <g clip-path="url(#clip0_349_259)">
+                  <path d="M1 2.59399H23.7652" stroke="white" stroke-width="2"/>
+                  <path d="M23.3525 2.38159L83 88.594" stroke="white" stroke-width="2"/>
+                  <path d="M82.4999 87.594C82.4999 87.594 92.5563 34.8744 99 1.09399" stroke="white" stroke-width="2"/>
+                  <path d="M125.02 1.49805H98.5195" stroke="white" stroke-width="2"/>
+                  <path d="M125.5 1L126 62.094" stroke="white" stroke-width="2"/>
+                  <path d="M158.723 72.9632L125.511 61.9319" stroke="white" stroke-width="2"/>
+                  <path d="M141 60.594L158.867 73.0584" stroke="white" stroke-width="2"/>
+                  <path d="M140.968 61.1525L175.56 2.39966" stroke="white" stroke-width="2"/>
+                  <path d="M175.133 2.63696H212" stroke="white" stroke-width="2"/>
+                  <path d="M211.571 2.87476L174.371 67.3087" stroke="white" stroke-width="2"/>
+                  <path d="M174.8 66.4939L216.8 122.494" stroke="white" stroke-width="2"/>
+                  <path d="M216 122.594H175.449" stroke="white" stroke-width="2"/>
+                  <path d="M175.814 122.755L151.179 96.4232L126.544 70.0913" stroke="white" stroke-width="2"/>
+                  <path d="M126.5 69.594L124.498 123.146" stroke="white" stroke-width="2"/>
+                  <path d="M124.906 123.648L66.6711 112.397" stroke="white" stroke-width="2"/>
+                  <path d="M1.42871 2.83667L67.0062 112.633" stroke="white" stroke-width="2"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_349_259">
+                    <rect width="218" height="125" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
           </a>
           <a href="#">
             <div class="trailer__link">
               <p class="trailer__link-title">Дискорд</p>
-              <img class="link__img ds" src="img/discord.png">
+              <!-- <img class="link__img ds" src="img/discord.png"> -->
+             
             </div>
           </a>
           <a href="#">
@@ -260,6 +311,21 @@
             <input class="input__submit" type="submit" value="Зарегистрироваться">
           </form>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="popup__burger" class="popup__burger">
+    <div class="popup__burger__body">
+      <div class="popup__burger__content">
+        <div class="popup__burger__text-wrapper">
+          <a href="#home" class="burger__item active">Главная</a>
+          <a href="#features" class="burger__item">Наш сервер</a>
+          <a href="#how" class="burger__item">Как начать играть</a>
+          <a href="#community" class="burger__item">Сообщества</a>
+          <a href="#" class="burger__item">Донат</a> 
+          <a href="#" class="burger__item">Форум</a>
       </div>
     </div>
   </div>

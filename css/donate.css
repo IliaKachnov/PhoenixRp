@@ -1,0 +1,10 @@
+body {
+  overflow: hidden;
+}
+
+.wrapper {
+  background-image: url("../img/donate-bg.png");
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+}

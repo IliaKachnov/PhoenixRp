@@ -63,6 +63,11 @@
   flex-direction: column;
   gap: 60px;
 }
+.personalData__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .status__img {
   width: 35px;
   height: 35px;
@@ -134,46 +139,29 @@
   width: 40px;
   height: 40px;
 }
-/* HOME END */
-
-/* .home {
-  position: relative;
-}
-.home__img {
-  position: absolute;
-  object-fit: fill;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  transition: all 1.5s ease;
-}
-.home:hover .home__img {
-  transform: scale(1.05);
-}
-.home__wrapper {
-  position: relative;
-  z-index: 2;
-} */
 .home {
   background-image: url("../img/fourth.png");
   background-size: cover;
   background-position: center center;
-  box-shadow: #01161b 0px 20px 30px -10px;
+  background-repeat: no-repeat;
 }
 .features {
   background-image: url("../img/third.png");
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .how {
   background-image: url("../img/second.png");
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .trailer {
   background-image: url("../img/first.png");
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 
@@ -328,10 +316,7 @@
   font-weight: 400;
   line-height: normal;
 }
-.how__download-wrapper {
 
- 
-}
 .how__download {
   height: 35px;
   background-color: #FFF;
@@ -366,10 +351,6 @@
 
 /* TRAILER */
 
-.section {
-}
-.trailer {
-}
 .trailer__wrapper {
   max-width: 1280px;
   width: 100%;
@@ -521,6 +502,7 @@
   height: 200px;
   flex-shrink: 0;
   background-color: #000;
+  transition: .3s ease all;
 }
 .trailer__link-title {
   color: #FFF;
@@ -535,6 +517,15 @@
 .link__img.vk {
   width: 150px;
   height: 70px;
+  fill: #FFF;
+}
+.trailer__link:hover {
+  background-color: #FFF;
+}
+.trailer__link:hover .link__img.vk g path,
+.trailer__link:hover .trailer__link-title  {
+  stroke: #000;
+  color: #000;
 }
 .link__img.ds {
   width: 150px;
@@ -546,3 +537,401 @@
 }
 
 /* TRAILER */
+
+.mobile__items {
+  display: none;
+}
+@media (max-width: 1700px) {
+  .how__title {
+    font-size: 30px;
+  }
+  .how__item-text {
+    font-size: 18px;
+  }
+  .how__item-title {
+    font-size: 22px;
+    width: 250px;
+    height: 40px;
+  }
+  .how__item {
+    width: 250px;
+    height: 280px;
+  }
+  .how__items {
+    width: max-content;
+  }
+  .how__download {
+    height: 30px;
+  }
+  .how__text {
+    font-size: 18px;
+    max-width: 790px;
+    width: 100%;
+  }
+}
+@media (max-width: 1300px) {
+  .aside {
+    display: none;
+  }
+  .home__wrapper {
+    flex-direction: column;
+  }
+  .status__wrapper {
+    justify-content: center;
+  }
+  .server__items {
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .mobile__items {
+    width: 368px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .mobile__item {
+    background-color: #000;
+    padding: 5px;
+  }
+  .register__download {
+    display: none;
+  }
+  .register__btn {
+    width: 368px;
+    margin: 0 auto;
+    font-size: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home__servers {
+    gap: 30px;
+  }
+  .home__wrapper {
+    gap: 20px;
+  }
+  .accordion__wrapper {
+    align-items: center;
+  }
+  .features__title {
+    /* text-align: center; */
+    width: 515px;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  .accordion {
+    height: 50px;
+  }
+  .accordion p {
+   font-size: 22px;
+  }
+  .panel.active {
+    border-width: 3px;
+  }
+  .panel__text {
+    font-size: 16px;
+    border-width: 3px;
+  }
+  .accordion__item {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .how__wrapper {
+    margin-left: 300px;
+  }
+  .features {
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .trailer {
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media (max-width: 1100px) {
+  .how__wrapper {
+    margin-left: 250px;
+  }
+  .how {
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  .trailer__wrapper {
+    padding: 0 20px;
+  }
+  .video__wrapper {
+    max-width: 984px;
+    width: 100%;
+  }
+  .arrow__top-right,
+  .arrow__top-left {
+    width: 40px;
+    height: 48px;
+    top: -20px;
+  }
+  .video__youtube,
+  .video__watch,
+  .video__title {
+    font-size: 40px;
+  }
+  .arrow__bottom-left,
+  .arrow__bottom-right {
+    width: 40px;
+    height: 48px;
+    bottom: -20px;
+  }
+}
+@media (max-width: 1050px) {
+  .how__item-title {
+    font-size: 18px;
+    width: 200px;
+  }
+  .how__item {
+    width: 200px;
+  }
+  .how__item-text {
+    padding: 10px;
+  }
+  .how__download {
+    font-size: 16px;
+  }
+  .how__title {
+    font-size: 25px;
+  }
+  .how__item-text {
+    font-size: 16px;
+  }
+  .how__text {
+    font-size: 16px;
+    max-width: 640px;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .how__wrapper {
+    margin-left: 130px;
+  }
+  .trailer__link {
+    max-width: 200px;
+  }
+}
+@media (max-width: 800px) {
+  .how__wrapper {
+    margin-left: 80px;
+  } 
+  .video__wrapper {
+    height: 400px;
+  }
+}
+@media (max-width: 750px) {
+  .how__wrapper {
+    max-width: max-content;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .section.how {
+    align-items: start;
+  }
+  .how__wrapper {
+    margin-top: 100px;
+    padding: 0 20px;
+  }
+  .how__item-title {
+    max-width: 200px;
+    width: 100%;
+  }
+  .how__item {
+    max-width: 200px;
+    width: 100%;
+    min-height: 200px;
+  }
+  .how__items {
+    max-width: 640px;
+    width: 100%;
+    min-height: 280px;
+  }
+  .how__wrapper {
+    min-height: 550px;
+  }
+}
+@media (max-width: 680px) {
+  .trailer__link-title {
+    font-size: 25px;
+  }
+  .subscribe__title {
+    font-size: 28px;
+  }
+  .trailer__link {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (max-width: 580px) {
+  .how__item-title {
+    font-size: 16px;
+  }
+  .how__download,
+  .how__item-text {
+    font-size: 14px;
+  }
+
+  .how__wrapper {
+    gap: 40px;
+  }
+}
+@media (max-width: 550px) {
+  .video__title {
+    font-size: 30px;
+  }
+  .trailer {
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}
+@media (max-width: 530px) {
+  .how__item-text {
+    background-color: #000;
+    max-width: 300px;
+    width: 100%;
+
+  }
+  .how__text {
+    font-size: 14px;
+  }
+  .how__wrapper {
+    padding: 0 10px;
+  }
+  .accordion__wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .features__title {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .features__wrapper {
+    width: max-content;
+    padding: 0 20px;
+  }
+  .panel {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .accordion {
+    width: 180px;
+  }
+  .accordion__wrapper {
+    gap: 10px;
+  }
+  .video__wrapper {
+    height: 300px;
+  }
+  .trailer__link {
+    width: 125px;
+    height: 150px;
+  }
+  .trailer__link-title {
+    font-size: 20px;
+  }
+  .link__img.vk {
+    width: 100px;
+    height: 60px;
+  }
+  .link__img.youtube {
+    height: 65px;
+    width: 100px;
+  }
+  
+}
+@media (max-width: 470px) {
+  .how__items {
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 20px;
+  }
+  .how__download {
+    height: 20px;
+  }
+  .how__item-title {
+    padding:10px;
+    height: 20px;
+  }
+  .how__item {
+    height: max-content;
+    min-height: 100%;
+  }
+  .how__text {
+    border-width: 3px;
+  }
+}
+@media (max-width: 430px) {
+  .register__btn,
+  .server__item {
+    max-width: 300px;
+    width: 100%;
+  }
+  .features__title {
+    font-size: 25px;
+  }
+  .container {
+    scroll-snap-type: none;
+  }
+  .status__wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .status {
+    display: none;
+  }
+  .status__list {
+    margin-top: 20px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 145px;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  .server__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .server__item {
+    height: 30px;
+  }
+  .server__title {
+    font-size: 20px;
+  }
+  .register__btn {
+    font-size: 25px;
+  }
+  .trailer__links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .video__wrapper {
+    height: 250px;
+  }
+  .video__eye {
+    width: 100px;
+    height: 50px;
+  }
+  .video__youtube,
+  .video__watch,
+  .video__title {
+    font-size: 20px;
+  }
+}

@@ -49,3 +49,45 @@ serverItems.forEach((item) => {
     serverDropdown.classList.remove('active')
   });
 });
+
+
+const languageItems = document.querySelectorAll('.language__item');
+languageItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const languageText = item.querySelector('.language').textContent;
+    
+    const chooseLanguage = document.querySelector('.language__choose');
+  
+    chooseLanguage.textContent = languageText;
+  });
+});
+const ru = document.querySelector("#ru");
+const en = document.querySelector("#en");
+const ruFlag = document.querySelector('#ru-flag');
+const engFlag = document.querySelector('#en-flag');
+
+ru.addEventListener('click', () => {
+  ruFlag.classList.add('active');
+  engFlag.classList.remove('active');
+});
+en.addEventListener('click', () => {
+  engFlag.classList.add('active');
+  ruFlag.classList.remove('active');
+});
+
+
+
+const imageElement = document.querySelector(".burger__wrapper");
+const navBurgerWrapper = document.querySelector('.popup__burger')
+const burgerItems = document.querySelectorAll('.burger__item');
+
+burgerItems.forEach((burgerItem) => {
+  burgerItem.addEventListener('click', () => {
+    navBurgerWrapper.classList.remove('open');
+  })
+})
+
+
+imageElement.addEventListener("click",  () => {
+  navBurgerWrapper.classList.toggle('open');
+});

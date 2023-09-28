@@ -1,0 +1,226 @@
+.nav__burger-wrapper {
+  display: none;
+}
+.burger__wrapper {
+  display: none;
+}
+.popup__burger {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease .2s 0s;
+}
+.popup__burger.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__burger.open .popup__burger__content {
+  opacity: 1;
+}
+.popup__burger__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup__burger__content{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: 70px;
+  z-index: 5;
+  background-color: #000;
+}
+
+.popup__burger__text-wrapper {
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.burger__item {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 35.2px */
+  position: relative;
+  width: max-content;
+}
+
+.burger__dropdown {
+  height: 0;
+  overflow: hidden;
+}
+.burger__dropdown.active {
+  height: 100%;
+}
+.burger__dropdown-item {
+  margin-top: 16px;
+  color: #081A32;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+}
+
+.burger__arrow-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.burger__arrow-wrapper.active .burger__arrow {
+  transform: rotate(180deg);
+}
+.burger__free-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.burger__arrow {
+  transition: all .2s ease;
+}
+.burger__free {
+  width: 38px;
+  height: 20px;
+  border-radius: 32px;
+  background: #D7171F;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+
+  color: #FFF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 12px */
+}
+.burger__phone {
+  color: #081A32;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 35.2px */
+  margin-top: 240px;
+}
+.nav__items {
+  display: flex;
+}
+
+@media (max-width: 1630px) {
+  .nav__main,
+  .nav__phone {
+    display: none;
+  }
+  .nav__phone-img {
+    width: 24px;
+    height: 24px;
+  }
+  .nav__phone-wrapper {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.60);  
+    cursor: pointer;
+  }
+  .burger__img {
+    width: 24px;
+    height: 24px;
+  }
+  .nav__burger-wrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background: var(--black, #081A32);
+    height: 48px;
+    width: 48px;
+    transition: all .2s ease;
+  }
+  .nav__burger-wrapper.active {
+    background: #FFF;
+  }
+}
+@media (max-width: 1600px) {
+  .nav__links-wrapper {
+    display: none;
+  }
+  .burger__wrapper {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .nav__items {
+    gap: 20px;
+  }
+  .nav__wrapper {
+    justify-content: space-around;
+    
+  }
+  .burger__line {
+    display: block;
+    content: '';
+    background-color: #FFF;
+    width: 30px;
+    height: 5px;
+    position: relative;
+  }
+  .burger__line::after {
+    top: 10px;
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: #FFF;
+    width: 30px;
+    height: 5px;
+  }
+}
+@media (max-width: 660px) {
+  .nav__support,
+  .logo__slogan {
+    display: none;
+  }
+  .nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .burger__item {
+    font-size: 24px;
+  }
+  .burger__phone {
+    margin-top: 150px;
+  }
+  .burger__item.active::after {
+    top: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .language__wrapper {
+    display: none;
+  }
+  .nav__wrapper {
+    align-items: center;
+  }
+  .burger__wrapper {
+    margin-top: 0;
+    align-items: start;
+    margin-bottom: 10px;
+  }
+}
