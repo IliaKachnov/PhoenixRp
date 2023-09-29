@@ -541,6 +541,11 @@
 .mobile__items {
   display: none;
 }
+
+
+
+
+
 @media (max-width: 1700px) {
   .how__title {
     font-size: 30px;
@@ -875,6 +880,16 @@
   }
   .how__text {
     border-width: 3px;
+  }
+}
+@media (max-width: 450px) {
+  .section.trailer {
+    border-top: 3px solid white;
+    height: 950px;
+  }
+  .features,
+  .how {
+    border-top: 3px solid white;
   }
 }
 @media (max-width: 430px) {

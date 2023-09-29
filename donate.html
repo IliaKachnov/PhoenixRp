@@ -5,148 +5,152 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles-donate.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
   <script src="scripts/donate.js" defer></script>
   <title>Phoenix RP</title>
 </head>
 <body>
   <div class="wrapper">
-    <div>
-      <div>
-        <h1>Пополнение счета</h1>
-        <div>
-          <div>
-            <p>Выбрать способ оплаты</p>
-            <div>
-              <div>
-                <img src="" alt="visa">
+    <div class="donate__wrapper">
+      <div class="donate">
+        <h1 class="donate__title">Пополнение счета</h1>
+        <div class="payment__wrapper">
+          <div class="dropdown__type">
+            <p class="dropdown__type-title">Выбрать способ оплаты</p>
+            <div class="dropdown__type-items hide">
+              <div class="dropdown__type-item">
+                <img class="visa" src="img/icons/visa.svg" alt="Visa">
               </div>
-              <div>
-                <img src="" alt="visa">
+              <div class="dropdown__type-item">
+                <img class="qiwi" src="img/icons/qiwi.svg" alt="Qiwi">
               </div>
-              <div>
-                <img src="" alt="visa">
+              <div class="dropdown__type-item">
+                <img class="mir" src="img/icons/mir.svg" alt="MIR">
               </div>
-              <div>
-                <img src="" alt="visa">
+              <div class="dropdown__type-item">
+                <img class="mastercard" src="img/icons/mastercard.svg" alt="MasterCard">
               </div>
-              <div>
-                <img src="" alt="visa">
+              <div class="dropdown__type-item">
+                <img class="Samsung Pay" src="img/icons/samsungpay.svg" alt="Samsung pay">
               </div>
-              <div>
-                <img src="" alt="visa">
+              <div class="dropdown__type-item">
+                <img class="sbp" src="img/icons/sbp.svg" alt="SBP">
               </div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-            </div>
-          </div>
-          <div>
-            <p>Выбрать сервер</p>
-            <div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-              <div>
-                <img src="" alt="visa">
-              </div>
-              <div>
-                <img src="" alt="visa">
+              <div class="dropdown__type-item">
+                <img class="gpay" src="img/icons/gpay.svg" alt="G Pay">
               </div>
             </div>
           </div>
-          <div>
-            <img src="" alt="">
-            <input type="text" placeholder="Введите логин">
+          <div class="server__dropdown">
+            <div class="server__title-wrapper">
+              <p class="server__title"><img src="img/icons/menu.svg"> Выбрать сервер</p>
+            </div>
+            <div class="server__dropdown-items hide">
+              <div class="server__dropdown-item">
+                <img class="server__dropdown-icon" src="img/icons/neonville.png" alt="visa">
+                <p class="server__dropdown-title">Neonville</p>
+              </div>
+              <div class="server__dropdown-item">
+                <img class="server__dropdown-icon" src="img/icons/cyberlith.png" alt="visa">
+                <p class="server__dropdown-title">Cyberlith</p>
+              </div>
+              <div class="server__dropdown-item">
+                <img class="server__dropdown-icon" src="img/icons/aetheria.png" alt="visa">
+                <p class="server__dropdown-title">Aetheria</p>
+              </div>
+              <div class="server__dropdown-item">
+                <img class="server__dropdown-icon" src="img/icons/techopolis.png" alt="visa">
+                <p class="server__dropdown-title">Technopolis</p>
+              </div>
+              <div class="server__dropdown-item">
+                <img class="server__dropdown-icon" src="img/icons/neotokyo.png" alt="visa">
+                <p class="server__dropdown-title">NeoTokyo</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="" alt="">
-            <input type="text" placeholder="Введите сумму">
+          <div class="login__wrapper">
+            <img class="login__img" src="img/icons/login.png">
+            <input class="login__input" type="text" placeholder="Введите логин">
           </div>
-          <div>
-            <input type="checkbox" name="" id="">
-            <label for="">Я ознакомился с
+          <div class="sum__wrapper">
+            <img class="sum__img" src="img/icons/donate.png" alt="">
+            <input class="sum__input" type="text" placeholder="Введите сумму">
+          </div>
+          <div class="checkbox__wrapper">
+            <input class="checkbox" type="checkbox" name="" id="">
+            <label class="checkbox__label" for="">Я ознакомился с
               Условиями оферты</label>
           </div>
-          <div>
-            <img src="" alt="">
-            <p>Перейти к оплате</p>
+          <div class="confirm__wrapper">
+            <img class="confirm__img" src="img/icons/success.png" alt="">
+            <a href="#" class="confirm__text">Перейти к оплате</a>
           </div>
         </div>
-        <div>
-          <p>Курс игровой валюты</p>
-          <div>
+        <div class="rate__wrapper">
+          <p class="rate__title">Курс игровой валюты</p>
+          <div class="rate">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
               <path d="M-3.93402e-07 8L13.5 0.205772L13.5 15.7942L-3.93402e-07 8Z" fill="white"/>
             </svg>
-            <p>1 - Рубль = 1 - EC</p>
-            <img src="" alt="">
+            <p class="rate__text">1 - Рубль = 1 - EC</p>
+            <img class="ec" src="img/icons/ec.png">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
               <path d="M14 8L0.499999 15.7942L0.5 0.205771L14 8Z" fill="white"/>
             </svg>
           </div>
-          <p>EC - это EliteCoins</p>
+          <p class="rate__subtitle">EC - это EliteCoins</p>
         </div>
       </div>
-      <div>
-        <h1>Информация</h1>
-        <div>
-          <p>На Phoenix RP можно приобрести различные предметы и услуги за виртуальную валюту.</p>
-          <p>Возможные покупки включают в себя транспортные средства, такие как:</p>
-          <ul>
-            <li>
-              <p>1. Машины</p>
-              <img src="img/icons/car.png">
+      <div class="info__wrapper">
+        <h1 class="info__title">Информация</h1>
+        <div class="info__body">
+          <p class="info__text first">На Phoenix RP можно приобрести различные предметы и услуги за виртуальную валюту.</p>
+          <p class="info__text second">Возможные покупки включают в себя транспортные средства, такие как:</p>
+          <ul class="info__list">
+            <li class="info__item">
+              <p class="info__item-text">1.Машины</p>
+              <img class="car" src="img/icons/car.png">
             </li>
-            <li>
-              <p>2. Самолеты</p>
-              <img src="img/icons/plane.png">
+            <li class="info__item">
+              <p class="info__item-text">2.Самолеты</p>
+              <img class="plane" src="img/icons/plane.png">
             </li>
-            <li>
-              <p>3. Яхты</p>
-              <img src="img/icons/yacht.png">
+            <li class="info__item">
+              <p class="info__item-text">3.Яхты</p>
+              <img class="yacht" src="img/icons/yacht.png">
             </li>
-            <li>
-              <p>4. Дома</p>
-              <img src="img/icons/house.png">
+            <li class="info__item">
+              <p class="info__item-text">4.Дома</p>
+              <img class="house" src="img/icons/house.png">
             </li>
-            <li>
-              <p>5. Бизнес-объекты</p>
-              <img src="img/icons/object.png">
+            <li class="info__item">
+              <p class="info__item-text">5.Бизнес-объекты</p>
+              <img class="object" src="img/icons/object.png">
             </li>
           </ul>
-          <p>Также можно купить различные предметы, такие как:</p>
-          <ul>
-            <li>
-              <p>1. Оружие</p>
-              <img src="img/icons/gun.png">
+          <p class="info__text third">Также можно купить различные предметы, такие как:</p>
+          <ul class="items">
+            <li class="item">
+              <p class="item__text">1.Оружие</p>
+              <img class="gun" src="img/icons/gun.png">
             </li>
-            <li>
-              <p>2. Одежда</p>
-              <img src="img/icons/clothes.png">
+            <li class="item">
+              <p class="item__text">2.Одежда</p>
+              <img class="clothes" src="img/icons/clothes.png">
             </li>
-            <li>
-              <p>3. Аксессуары</p>
-              <img src="img/icons/acs.png">
+            <li class="item">
+              <p class="item__text">3.Аксессуары</p>
+              <img class="acs" src="img/icons/acs.png">
             </li>
-            <li>
-              <p>4. Апгрейды</p>
-              <img src="img/icons/up.png">
+            <li class="item">
+              <p class="item__text">4.Апгрейды</p>
+              <img class="up" src="img/icons/up.png">
             </li>
-            <li>
-              <p>5. Специальные возможности</p>
-              <img src="img/icons/human.png">
+            <li class="item">
+              <p class="item__text">5.Специальные возможности</p>
+              <img class="human" src="img/icons/human.png">
             </li>
           </ul>
         </div>

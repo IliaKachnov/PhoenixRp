@@ -91,3 +91,77 @@ burgerItems.forEach((burgerItem) => {
 imageElement.addEventListener("click",  () => {
   navBurgerWrapper.classList.toggle('open');
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.form__wrapper');
+  const serverSelection = document.querySelector('.choose__server');
+  const loginInput = document.querySelector('.input__login');
+  const emailInput = document.querySelector('.input__email');
+  const passwordInput = document.querySelector('.input__password');
+  const repeatPasswordInput = document.querySelector('.input__repeat-password');
+  const checkbox = document.querySelector('.input__checkbox');
+
+  form.addEventListener('submit', function (e) {
+    resetErrors();
+    const selectedServer = serverSelection.textContent.trim();
+    const allowedServers = ['Neonville', 'Cyberlith', 'Aetheria', 'Technopolis', 'NeoTokyo'];
+    const loginValue = loginInput.value.trim();
+    const emailValue = emailInput.value.trim();
+    const passwordValue = passwordInput.value.trim();
+    const repeatPasswordValue = repeatPasswordInput.value.trim();
+
+
+
+    if (loginValue === '' || selectedServer === 'Выберите сервер' || !allowedServers.includes(selectedServer) || emailValue === '' || passwordValue === '' || repeatPasswordValue === '' || !checkbox.checked) {
+      if (selectedServer === 'Выберите сервер' || !allowedServers.includes(selectedServer)) {
+        e.preventDefault();
+        setError(serverSelection, 'Выберите сервер из списка.');
+      }
+      if (loginValue === '') {
+        e.preventDefault();
+        setError(loginInput, 'Введите логин.');
+      }
+  
+      
+      if (emailValue === '') {
+        e.preventDefault();
+        setError(emailInput, 'Введите почту.');
+      }
+  
+      
+      if (passwordValue === '') {
+        e.preventDefault();
+        setError(passwordInput, 'Введите пароль.');
+      }
+  
+      
+      if (repeatPasswordValue === '') {
+        e.preventDefault();
+        setError(repeatPasswordInput, 'Повторите пароль.');
+      } else if (repeatPasswordValue !== passwordValue) {
+        e.preventDefault();
+        setError(repeatPasswordInput, 'Пароли не совпадают.');
+      }
+
+      if (!checkbox.checked) {
+        e.preventDefault();
+        setError(checkbox, 'Согласитесь с условиями пользования.');
+      } 
+    } else {
+      modalName.classList.remove('open');
+      form.reset();
+      serverSelection.textContent = 'Выберите сервер';
+    }
+   
+  });
+
+
+  function resetErrors() {
+    const errorMessages = document.querySelectorAll('.error-message');
+    errorMessages.forEach(function (errorMessage) {
+      errorMessage.style.display = 'none';
+    });
+  }
+});
