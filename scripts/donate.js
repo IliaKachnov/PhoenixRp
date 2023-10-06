@@ -21,20 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const title = document.querySelector('.dropdown__type-title');
   const itemsContainer = document.querySelector('.dropdown__type-items');
   const items = document.querySelectorAll('.dropdown__type-item');
-
-  // Добавляем обработчик клика на заголовок
   title.addEventListener('click', function () {
-    // Убираем класс hide у контейнера элементов
     itemsContainer.classList.toggle('hide');
   });
-
-  // Перебираем все элементы .dropdown__type-item
   items.forEach(function (item) {
     item.addEventListener('click', function () {
       const altText = item.querySelector('img').getAttribute('alt');
       title.textContent = altText;
-
-      // Добавляем класс hide обратно к контейнеру элементов
       itemsContainer.classList.add('hide');
     });
   });

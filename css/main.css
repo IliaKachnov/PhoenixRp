@@ -140,25 +140,25 @@
   height: 40px;
 }
 .home {
-  background-image: url("../img/fourth.png");
+  background-image: url("../img/fourth.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .features {
-  background-image: url("../img/third.png");
+  background-image: url("../img/third.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .how {
-  background-image: url("../img/second.png");
+  background-image: url("../img/second.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .trailer {
-  background-image: url("../img/first.png");
+  background-image: url("../img/first.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -522,7 +522,19 @@
 .trailer__link:hover {
   background-color: #FFF;
 }
+.trailer__link:hover .link__img.youtube path,
+.trailer__link:hover .link__img.youtube rect,
+.trailer__link:hover .trailer__link-title  {
+  stroke: #000;
+  fill: #000;
+  color: #000;
+}
 .trailer__link:hover .link__img.vk g path,
+.trailer__link:hover .trailer__link-title  {
+  stroke: #000;
+  color: #000;
+}
+.trailer__link:hover .link__img.ds g path,
 .trailer__link:hover .trailer__link-title  {
   stroke: #000;
   color: #000;
@@ -542,6 +554,58 @@
   display: none;
 }
 
+
+/*  */
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin-right: 20px;
+}
+.custom-checkbox+label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  gap: 20px;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  cursor: pointer;
+  background-image: url("../img/checkbox-default.svg");
+}
+/* .custom-checkbox:checked+label::before {
+} */
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+  background-image: url("../img/checkbox-hover.svg");
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+  background-image: url("../img/checkbox-check.svg") !important;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus+label::before {
+  background-image: url("../img/checkbox-check.svg") !important;
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before {
+  background-image: url("../img/checkbox-default.svg");
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+  background-image: url("../img/checkbox-default.svg");
+}
+
+/*  */
 
 
 

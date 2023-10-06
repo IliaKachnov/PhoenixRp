@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  background-image: url("../img/donate-bg.png");
+  background-image: url("../img/donate-bg.webp");
   background-size: cover;
   background-position: center center;
   height: 100%;
@@ -91,12 +91,13 @@ body {
 }
 .server__dropdown {
   margin-top: 10px;
+  position: relative;
 }
 .server__dropdown-items.hide {
   display: none;
 }
 .server__title-wrapper {
-  position: relative;
+  
 }
 .server__title {
   cursor: pointer;
@@ -196,7 +197,7 @@ body {
   display: flex;
   align-items: center;
   /* justify-content: center; */
-  padding-left: 30px;
+  padding-left: 25px;
   gap: 30px;
   color: #FFF;
   font-size: 20px;
@@ -211,7 +212,13 @@ body {
 .checkbox {
 }
 .checkbox__label {
+  /* margin-left: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
+
 .confirm__wrapper {
   margin-top: 10px;
   cursor: pointer;
@@ -229,6 +236,19 @@ body {
   height: 50px;
   flex-shrink: 0;
   background: #000;
+}
+.confirm__wrapper:hover .confirm__text,
+.confirm__wrapper:hover {
+  background-color: #FFF;
+  color: #000;
+}
+.confirm__wrapper:hover .confirm__img path,
+.confirm__wrapper:hover .confirm__img {
+  color: #000;
+  stroke: #000;
+}
+.confirm__wrapper:hover .confirm__img rect {
+  fill: #000;
 }
 .confirm__img {
   width: 34px;
@@ -394,6 +414,62 @@ margin-top: 20px;
   margin-left: 10px;
 }
 
+
+/*  */
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin-right: 20px;
+}
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-image: url("../img/checkbox-default.svg");
+}
+/* .custom-checkbox:checked+label::before {
+} */
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+  background-image: url("../img/checkbox-hover.svg");
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+  background-image: url("../img/checkbox-check.svg") !important;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus+label::before {
+  background-image: url("../img/checkbox-check.svg") !important;
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before {
+  background-image: url("../img/checkbox-default.svg");
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+  background-image: url("../img/checkbox-default.svg");
+}
+
+
+/*  */
+
+
+
+
+
 @media (max-width: 1650px) {
   .wrapper {
     padding-top: 50px;
@@ -484,6 +560,10 @@ margin-top: 20px;
   .dropdown__type-title {
     font-size: 20px;
     width: 340px;
+  }
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .donate,
   .info__wrapper,
